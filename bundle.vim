@@ -369,12 +369,6 @@ if has_key(s:enabled, 'devdocs')
 endif
 
 
-" CoC
-if has_key(s:enabled, 'coc')
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	IncScript site/bundle/coc.vim
-endif
-
 " vim-lsp
 if has_key(s:enabled, 'lsp')
 	Plug 'prabirshrestha/vim-lsp'
@@ -396,7 +390,14 @@ endif
 " codeium.vim
 if has_key(s:enabled, 'codeium')
 	Plug 'Exafunction/codeium.vim'
-	IncScript site/bundle/codeium.vim
+	let g:codeium_disable_bindings = 1
+	" IncScript site/bundle/codeium.vim
+endif
+
+" CoC
+if has_key(s:enabled, 'coc')
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	IncScript site/bundle/coc.vim
 endif
 
 " vimspector

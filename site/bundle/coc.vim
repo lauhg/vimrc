@@ -25,11 +25,17 @@ endif
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? coc#pum#prev(1) : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? coc#pum#prev(1) : "\<C-h>"
+
+inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : codeium#Accept()
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<cr>"
+
+inoremap <silent><expr> <c-p> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
+inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
 
 function! s:check_back_space() abort
 	let col = col('.') - 1

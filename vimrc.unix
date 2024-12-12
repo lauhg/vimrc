@@ -30,7 +30,7 @@ if get(g:, 'vim_manual', 0) == 0
 		let g:bundle_group += ['basic', 'inter', 'high', 'opt']
 		" let g:bundle_group += ['ale']
 	endif
-	let g:bundle_group += ['nerdtree', 'autopair', 'stargate', 'codeium', 'coc', 'colors', 'editorconfig', 'matchup', 'splitjoin']
+	let g:bundle_group += ['nerdtree', 'autopair', 'stargate', 'coc', 'codeium', 'colors', 'editorconfig', 'matchup', 'splitjoin']
 endif
 
 if len(g:bundle_group) > 0
@@ -40,7 +40,8 @@ endif
 hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 hi SignColumn ctermbg=0
 
-set guifont=Source\ Code\ Pro\ 12
+set guifont=Source\ Code\ Pro\ 15
+set guioptions-=T
 
 " luafile ~/.vim/lua/vim-textmate/vim-textmate.lua
 

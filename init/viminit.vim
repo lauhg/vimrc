@@ -50,14 +50,14 @@ set showcmd
 " some old terminal softwares will send ^H for <backspace> by default,
 " change your terminal settings to bind <backspace> to ASCII code 127.
 "----------------------------------------------------------------------
-noremap <C-h> <left>
-noremap <C-j> <down>
-noremap <C-k> <up>
-noremap <C-l> <right>
-inoremap <C-h> <left>
-inoremap <C-j> <down>
-inoremap <C-k> <up>
-inoremap <C-l> <right>
+" noremap <C-h> <left>
+" noremap <C-j> <down>
+" noremap <C-k> <up>
+" noremap <C-l> <right>
+" inoremap <C-h> <backspace>
+" inoremap <C-j> <down>
+" inoremap <C-k> <up>
+" inoremap <C-l> <right>
 
 
 "----------------------------------------------------------------------
@@ -232,28 +232,35 @@ nnoremap <silent><tab> <nop>
 nnoremap <silent><tab>f <c-i>
 nnoremap <silent><tab>b <c-o>
 
+" normal mode as emacs
+nnoremap <c-a> <home>
+nnoremap <c-e> <end>
+
 " insert mode as emacs
 inoremap <c-a> <home>
 inoremap <c-e> <end>
 inoremap <c-d> <del>
-inoremap <c-_> <c-k>
+" inoremap <c-_> <c-k>
 inoremap <c-x><c-a> <c-a>
 inoremap <c-x><c-b> <c-e>
 inoremap <c-f> <right>
 inoremap <c-b> <left>
+inoremap <c-k> <c-o>D
+" inoremap <silent><expr> <c-p> pumvisible()? "\<c-p>" : "\<up>"
+" inoremap <silent><expr> <c-n> pumvisible()? "\<c-n>" : "\<down>"
 
 " faster command mode
-cnoremap <c-h> <left>
-cnoremap <c-j> <down>
-cnoremap <c-k> <up>
-cnoremap <c-l> <right>
+" cnoremap <c-h> <left>
+" cnoremap <c-j> <down>
+" cnoremap <c-k> <up>
+" cnoremap <c-l> <right>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 cnoremap <c-f> <right>
 cnoremap <c-b> <left>
 cnoremap <c-d> <del>
-cnoremap <c-_> <c-k>
-cnoremap <c-o> <c-d>
+" cnoremap <c-_> <c-k>
+" cnoremap <c-o> <c-d>
 cnoremap <c-x><c-f> <c-f>
 cnoremap <c-x><c-a> <c-a>
 cnoremap <c-x><c-e> <c-e>
