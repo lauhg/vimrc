@@ -24,24 +24,24 @@ command! FontBoldOff call s:FontBoldOff()
 "- GUI Setting
 "----------------------------------------------------------------------
 function! s:GuiTheme(theme)
-	if type(a:theme) == 0
-		let l:theme = string(a:theme)
-	else
-		let l:theme = a:theme
-	endif
-	if l:theme == '0'
-		set guifont=inconsolata:h11
-		color desert256
-		highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE 
-			\ gui=NONE guifg=DarkGrey guibg=NONE
-	elseif l:theme == '1'
-		set guifont=inconsolata:h11
-		color seoul256
-	elseif l:theme == '2'
-		set guifont=fixedsys:h10
-		color seoul256
-		FontBoldOff
-	endif
+	" if type(a:theme) == 0
+	" 	let l:theme = string(a:theme)
+	" else
+	" 	let l:theme = a:theme
+	" endif
+	" if l:theme == '0'
+	" 	set guifont=inconsolata:h11
+	" 	color desert256
+	" 	highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE 
+	" 		\ gui=NONE guifg=DarkGrey guibg=NONE
+	" elseif l:theme == '1'
+	" 	set guifont=inconsolata:h11
+	" 	color seoul256
+	" elseif l:theme == '2'
+	" 	set guifont=fixedsys:h10
+	" 	color seoul256
+	" 	FontBoldOff
+	" endif
 endfunc
 
 command! -nargs=1 GuiTheme call s:GuiTheme(<f-args>)

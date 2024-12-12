@@ -239,6 +239,8 @@ inoremap <c-d> <del>
 inoremap <c-_> <c-k>
 inoremap <c-x><c-a> <c-a>
 inoremap <c-x><c-b> <c-e>
+inoremap <c-f> <right>
+inoremap <c-b> <left>
 
 " faster command mode
 cnoremap <c-h> <left>

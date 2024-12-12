@@ -5,7 +5,7 @@ exec 'so '.fnameescape(s:home).'/init.vim'
 exec 'so '.fnameescape(s:home).'/skywind.vim'
 
 set t_Co=256
-color desert256
+" color desert256
 
 hi! CursorLineNr cterm=none
 
@@ -16,7 +16,7 @@ if !exists('g:bundle_group')
 	let g:bundle_group = []
 endif
 
-let g:vim_startup = get(g:, 'vim_startup', 0)
+let g:vim_startup = get(g:, 'vim_startup', 2)
 
 if g:vim_startup != 0 || has('gui_running')
 	call Tools_SwitchLayout()
@@ -28,9 +28,9 @@ if get(g:, 'vim_manual', 0) == 0
 		let g:bundle_group += ['inter']
 	elseif g:vim_startup == 2
 		let g:bundle_group += ['basic', 'inter', 'high', 'opt']
-		let g:bundle_group += ['ale']
+		" let g:bundle_group += ['ale']
 	endif
-	let g:bundle_group += ['nerdtree']
+	let g:bundle_group += ['nerdtree', 'autopair', 'stargate', 'codeium', 'coc', 'colors', 'editorconfig', 'matchup', 'splitjoin']
 endif
 
 if len(g:bundle_group) > 0
@@ -40,6 +40,13 @@ endif
 hi LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 hi SignColumn ctermbg=0
 
+set guifont=Source\ Code\ Pro\ 12
 
+" luafile ~/.vim/lua/vim-textmate/vim-textmate.lua
 
-
+if has('gui_running')
+	color onehalflight
+	winpos 694 0
+	set lines=50 columns=120
+	set guicursor=a:blinkon0
+endif

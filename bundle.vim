@@ -46,10 +46,10 @@ call plug#begin(get(g:, 'bundle_home', '~/.vim/bundles'))
 if has_key(s:enabled, 'simple')
 	Plug 'justinmk/vim-dirvish'
 	Plug 'justinmk/vim-sneak'
-	Plug 'tpope/vim-fugitive'
-	Plug 'tpope/vim-unimpaired'
-	Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
-	Plug 'bootleq/vim-cycle'
+	" Plug 'tpope/vim-fugitive'
+	" Plug 'tpope/vim-unimpaired'
+	" Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
+	" Plug 'bootleq/vim-cycle'
 	Plug 'tpope/vim-surround'
 
 	if !has_key(s:enabled, 'autopair')
@@ -93,8 +93,8 @@ if has_key(s:enabled, 'simple')
 	xmap gZ <Plug>Sneak_S
 
 	IncScript site/bundle/dirvish.vim
-	IncScript site/bundle/cycle.vim
-	IncScript site/bundle/git.vim
+	" IncScript site/bundle/cycle.vim
+	" IncScript site/bundle/git.vim
 endif
 
 
@@ -103,16 +103,16 @@ endif
 "----------------------------------------------------------------------
 if has_key(s:enabled, 'basic')
 	Plug 't9md/vim-choosewin'
-	Plug 'tpope/vim-rhubarb'
+	" Plug 'tpope/vim-rhubarb'
 	Plug 'mhinz/vim-startify'
 	Plug 'xolox/vim-misc'
 	Plug 'terryma/vim-expand-region'
 	Plug 'skywind3000/vim-dict'
-	Plug 'tommcdo/vim-exchange'
-	Plug 'tommcdo/vim-lion'
+	" Plug 'tommcdo/vim-exchange'
+	" Plug 'tommcdo/vim-lion'
 	" Plug 'embear/vim-localvimrc'
 
-	Plug 'pprovost/vim-ps1', { 'for': 'ps1' }
+	" Plug 'pprovost/vim-ps1', { 'for': 'ps1' }
 	Plug 'tbastos/vim-lua', { 'for': 'lua' }
 	Plug 'vim-python/python-syntax', { 'for': ['python'] }
 	Plug 'pboettch/vim-cmake-syntax', { 'for': ['cmake'] }
@@ -178,10 +178,11 @@ if has_key(s:enabled, 'basic')
 	" let g:cpp_no_function_highlight = 1
 	let g:cpp_posix_standard = 1
 
-	let g:python_highlight_builtins = 1
-	let g:python_highlight_builtin_objs = 1
-	let g:python_highlight_builtin_types = 1
-	let g:python_highlight_builtin_funcs = 1
+	let g:python_highlight_all = 1
+	" let g:python_highlight_builtins = 1
+	" let g:python_highlight_builtin_objs = 1
+	" let g:python_highlight_builtin_types = 1
+	" let g:python_highlight_builtin_funcs = 1
 
 	nmap <m-e> <Plug>(choosewin)
 	map <m-+> <Plug>(expand_region_expand)
@@ -197,12 +198,12 @@ if has_key(s:enabled, 'inter')
 	Plug 'xolox/vim-notes', { 'on': ['Note', 'SearchNotes', 'DeleteNotes', 'RecentNotes'] }
 	Plug 'skywind3000/vimoutliner', { 'for': 'votl' }
 	" Plug 'vimoutliner/vimoutlliner', { 'for': 'votl' }
-	Plug 'mattn/webapi-vim'
-	Plug 'mattn/gist-vim'
-	Plug 'hrj/vim-DrawIt'
-	Plug 'lambdalisue/vim-gista', { 'on': 'Gista' }
+	" Plug 'mattn/webapi-vim'
+	" Plug 'mattn/gist-vim'
+	" Plug 'hrj/vim-DrawIt'
+	" Plug 'lambdalisue/vim-gista', { 'on': 'Gista' }
 	if v:version >= 800 || has('nvim')
-		Plug 'rbong/vim-flog', { 'branch': 'v1' }
+		" Plug 'rbong/vim-flog', { 'branch': 'v1' }
 	endif
 
 	if 1
@@ -230,11 +231,11 @@ if has_key(s:enabled, 'high')
 	Plug 'mhinz/vim-signify'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
-	Plug 'jceb/vim-orgmode', { 'for': 'org' }
-	Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
-	Plug 'francoiscabrol/ranger.vim'
+	" Plug 'jceb/vim-orgmode', { 'for': 'org' }
+	" Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
+	" Plug 'francoiscabrol/ranger.vim'
 	Plug 'sbdchd/neoformat'
-	Plug 'dhruvasagar/vim-table-mode'
+	" Plug 'dhruvasagar/vim-table-mode'
 
 	if has('python3') || has('python2')
 		Plug 'chiel92/vim-autoformat'
@@ -247,7 +248,7 @@ if has_key(s:enabled, 'high')
 	nnoremap <silent> <leader>cm :ErrorAtCursor<CR>
 	nnoremap <silent> <leader>cM :RemoveErrorMarkers<cr>
 
-	let g:ranger_map_keys = 0
+	" let g:ranger_map_keys = 0
 
 end
 
@@ -257,17 +258,17 @@ end
 "----------------------------------------------------------------------
 if has_key(s:enabled, 'opt')
 	Plug 'dyng/ctrlsf.vim'
-	Plug 'tpope/vim-speeddating'
+	" Plug 'tpope/vim-speeddating'
 	Plug 'voldikss/vim-translator'
 	Plug 'jreybert/vimagit'
 	Plug 'cohama/agit.vim'
-	Plug 'hotoo/pangu.vim'
+	" Plug 'hotoo/pangu.vim'
 
 	" Plug 'tpope/vim-apathy'
 	" Plug 'mh21/errormarker.vim'
 
-	let g:pangu_rule_date = 1
-	let g:pangu_enabled = 1
+	" let g:pangu_rule_date = 1
+	" let g:pangu_enabled = 1
 
 	if 1
 		" vimscript development
@@ -280,7 +281,7 @@ if has_key(s:enabled, 'opt')
 		IncScript site/bundle/switch.vim
 	endif
 
-	if 1
+	if 0
 		Plug 'mattn/emmet-vim',  { 'on': 'EmmetInstall' }
 		IncScript site/bundle/emmet.vim
 	endif
@@ -390,6 +391,12 @@ endif
 if has_key(s:enabled, 'copilot')
 	Plug 'github/copilot.vim'
 	IncScript site/bundle/copilot.vim
+endif
+
+" codeium.vim
+if has_key(s:enabled, 'codeium')
+	Plug 'Exafunction/codeium.vim'
+	IncScript site/bundle/codeium.vim
 endif
 
 " vimspector
