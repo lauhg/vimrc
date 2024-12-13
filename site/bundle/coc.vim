@@ -37,6 +37,8 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<cr>"
 inoremap <silent><expr> <c-p> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
 inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
 
+inoremap <silent><expr> <esc> coc#pum#visible() ? coc#pum#close() : "\<esc>"
+
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]  =~# '\s'

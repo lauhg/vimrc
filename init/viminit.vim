@@ -232,9 +232,16 @@ nnoremap <silent><tab> <nop>
 nnoremap <silent><tab>f <c-i>
 nnoremap <silent><tab>b <c-o>
 
+" esc
+" nnoremap <c-g> <esc>
+" inoremap <c-g> <esc>
+" cnoremap <c-g> <esc>
+" vnoremap <c-g> <esc>
+" xnoremap <c-g> <esc>
+
 " normal mode as emacs
 nnoremap <c-a> <home>
-nnoremap <c-e> <end>
+" nnoremap <c-e> <end>
 
 " insert mode as emacs
 inoremap <c-a> <home>

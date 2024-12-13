@@ -72,8 +72,8 @@ nnoremap <space>p viw"0p
 nnoremap <space>y yiw
 
 " fast save
-nnoremap <C-S> :w<cr>
-inoremap <C-S> <ESC>:w<cr>
+nnoremap <silent><C-S> :w<cr>
+inoremap <silent><C-S> <ESC>:w<cr>
 
 nnoremap <silent><m-t> :tabnew<cr>
 vnoremap <silent><m-t> <ESC>:tabnew<cr>
@@ -82,8 +82,8 @@ nnoremap <silent><m-w> :tabclose<cr>
 inoremap <silent><m-w> <ESC>:tabclose<cr>
 nnoremap <silent><m-v> :close<cr>
 inoremap <silent><m-v> <esc>:close<cr>
-nnoremap <m-s> :w<cr>
-inoremap <m-s> <esc>:w<cr>
+nnoremap <silent><m-s> :w<cr>
+inoremap <silent><m-s> <esc>:w<cr>
 
 
 "----------------------------------------------------------------------
